@@ -6,11 +6,13 @@ The maze presented challenges in the form of colored tiles, indicating the next 
 
 The maze featured walls that the robot had to avoid while moving towards the waypoint challenges, signified by black strips on the floor. These challenges required the robot to execute turns based on the color of the tile, adding complexity to the navigation process.
 
-| Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
-| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 |
-| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 |
-| Row 3, Col 1 | Row 3, Col 2 | Row 3, Col 3 |
+## Algorithm
+![Algorithm](https://github.com/TayGuangSheng/CG1111A-mBot-Maze-Solver/blob/main/Report%20Images/Algorithm.png)
+
+## Physical Appearance 
+|![Left View](https://github.com/TayGuangSheng/CG1111A-mBot-Maze-Solver/blob/main/Report%20Images/Left%20View.png) Left View|![Right View](https://github.com/TayGuangSheng/CG1111A-mBot-Maze-Solver/blob/main/Report%20Images/Front%20View.png) Front View| 
+|----------|----------|
+
 
 
 ## Hardware Set-up 
@@ -30,6 +32,7 @@ The maze featured walls that the robot had to avoid while moving towards the way
 
 ## Calibration 
 ### PID 
-The PID is used 
+In order to ensure the mBot travels in a straight line, we are required to use an Ultrasonic Sensor and an IR sensor to detect the distance the robot is from the wall to adjust the trajectory of the robot. However, to avoid the robot zig-zagging as it travelled, our group decided to adopt the PID function instead. Compared to using a nudge function that alters the path of the robot by a set amount, this algorithm reduces the magnitude of correction as the mBot gets closer to moving in a straight line. Thus, smoothing out the path of travel of the robot and fulfilling the requirements of the robot travelling as straight as possible.
 
 ### Colour Sensor 
+All colours can be derived from a combination of the three primary colours, red, green and blue (RGB). Surfaces absorb and reflect different amounts of light from each of the three primary colours, and it is this combination of the reflected light that is perceived as different colours to our eyes. Utilising this concept with a Light-Dependent Resistor (LDR) in a potential divider circuit, and reading the output voltage, the values of reflected red, green, and blue light can be determined by sequentially activating the red, green, and blue Light Emitting Diodes (LED). The reflected colour can then be calculated.
